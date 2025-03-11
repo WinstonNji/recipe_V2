@@ -11,7 +11,7 @@ export default function App() {
       <Routes>
         <Route path="/" element={<Homepage/>}></Route>
         <Route path="/favourites" element={<Favourites/>}></Route>
-      </Routes>
+      </Routes> 
     </div>
   )
 }

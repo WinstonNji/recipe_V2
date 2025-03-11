@@ -3,10 +3,10 @@ import { HeartPulse, HeartIcon, SoupIcon } from 'lucide-react'
 
 function RecipeCard() {
   return (
-    <div className='p-4 rounded-md bg-gray-300 flex flex-col gap-2 '>
+    <div className='p-4 rounded-md bg-gray-300 flex flex-col gap-2 max-h-fit'>
             <div className='relative'>
                 <img 
-                  src="/dishImg.png" 
+                  src="/public/dishImg.png" 
                   alt=""
                   className='rounded-md
                   w-full'
