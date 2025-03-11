@@ -16,7 +16,7 @@ function RecipeCard() {
                   <HeartIcon fill='white' className='hover:fill-red-600 hover:text-red-600 transition-all duration-200 ease-in-out' />
                 </div>
               
-                <div className='flex gap-2 absolute bottom-2 left-2 text-black p-2 rounded-md font-bold bg-gray-100'>
+                <div className='flex gap-2 absolute bottom-2 left-2 text-black p-2 rounded-md font-bold bg-gray-100 cursor-default'>
                   <SoupIcon />
                   <span>2 Servings</span>
                 </div>

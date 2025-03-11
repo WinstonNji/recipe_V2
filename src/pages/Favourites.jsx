@@ -1,8 +1,11 @@
 import React from 'react'
+import { useState } from 'react'
 
 function Favourites() {
   return (
-    <div>Favourites</div>
+    <div className='bg-red-500 h-screen flex flex-1 justify-center p-10 box-border'>
+        
+    </div>
   )
 }
 

@@ -40,7 +40,6 @@ const Desktop = () => {
 
         <Link to={'/'}>
             <div className='flex gap-1 hover:font-bold'>
-                
                     <HomeIcon></HomeIcon>
                     <span>Home</span>
             </div>
