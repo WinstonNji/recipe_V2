@@ -4,7 +4,7 @@ import RecipeCard from '../components/RecipeCard'
 
 function Favourites() {
 
-  const [favNotEmpty] = useState(true)
+  const [favNotEmpty] = useState(false)
 
   return (
     <div className='h-screen flex flex-1 justify-center p-10 box-border'>
@@ -15,7 +15,7 @@ function Favourites() {
             <p className='font-semibold'>Oops you have no favourites</p>
           </div>
           <div>
-            <img src="/public/404.png" alt="" />
+            <img src="/404.png" alt="" />
           </div>
         </div>
       )}

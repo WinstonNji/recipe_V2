@@ -36,7 +36,7 @@ const Mobile = () => {
 
 const Desktop = () => {
     return (
-        <div className='hidden lg:flex sticky top-0 bottom-0  flex-col justify-center gap-10 p-6 z-30 box-border border-r-2'>
+        <div className='hidden md:flex lg:flex sticky top-0 bottom-0  flex-col justify-center gap-10 p-6 z-30 box-border border-r-2'>
 
         <Link to={'/'}>
             <div className='flex gap-1 hover:font-bold'>
