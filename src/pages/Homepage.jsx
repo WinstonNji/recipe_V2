@@ -38,9 +38,9 @@ function Homepage() {
   }
 
   return (
-    <div className=' flex flex-1  p-10'>
+    <div className=' flex flex-1  p-10 bg-pink-400'>
       <div className='h-screen w-full'>
-        <form onSubmit={searchRecipe} action="" className='flex gap-2 bg-white p-3 border rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 ease-in-out'>
+        <form onSubmit={searchRecipe} action="" className='flex gap-2 bg-white p-3 border rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 ease-in-out' >
           <button type='submit'>
             <Search />
           </button >
@@ -59,7 +59,7 @@ function Homepage() {
         </div>
 
         {/* Grid */}
-        <div className='grid md:grid-cols-2 lg:grid-cols-3  content-center justify-center gap-8 box-border mt-10 '>
+        <div className='grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3  content-center justify-center gap-8 box-border mt-10 bg-red-300 items-center'>
           {/* Card */}
           {!loading && recipe.map(meal => (
             <RecipeCard recipe={meal}/>
