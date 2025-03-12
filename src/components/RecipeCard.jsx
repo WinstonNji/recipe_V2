@@ -3,15 +3,23 @@ import { HeartPulse, HeartIcon, SoupIcon } from 'lucide-react'
 
 function RecipeCard({recipe}) {
   console.log(recipe,'dd')
+
+  
+
   return (
-    <div className='p-4 rounded-md bg-gray-300 flex flex-col gap-2 max-h-fit'>
+    <div className='p-4 rounded-md bg-gray-300 ring-black flex flex-col gap-2 max-h-fit w-fit'>
             <div className='relative'>
               <a href={recipe.strYoutube} target='blank'>
-                <img 
+                <div className="skeleton h-full w-full"></div>
+                <img
                     src={recipe.strMealThumb}
                     alt={recipe.strMeal}
                     className='rounded-md
-                    w-full'
+                    max-w-64 opacity-0 transition-opacity duration-500'
+                    onLoad={(e) => {
+                      e.currentTarget.style.opacity = 1;
+                      e.currentTarget.previousElementSibling.style.display = 'none'
+                    }}
                   />
               </a>
                 
