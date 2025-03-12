@@ -6,13 +6,17 @@ import Favourites from "./pages/Favourites"
 
 export default function App() {
   return (
-    <div className="flex  ">
-      <SideBar></SideBar>
+    <div className="flex h-screen">
+      {/* Sidebar - Fixed Full Height */}
+      <SideBar />
 
-      <Routes>
-        <Route path="/" element={<Homepage/>}> </Route>
-        <Route path="/favourites" element={<Favourites/>}> </Route>
-      </Routes> 
+      {/* Main Content - Scrollable */}
+      <div className="flex-1 overflow-y-auto">
+        <Routes>
+          <Route path="/" element={<Homepage />} />
+          <Route path="/favourites" element={<Favourites />} />
+        </Routes>
+      </div>
     </div>
-  )
+  );
 }

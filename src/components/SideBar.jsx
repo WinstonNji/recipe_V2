@@ -36,22 +36,20 @@ const Mobile = () => {
 
 const Desktop = () => {
     return (
-        <div className='hidden md:flex lg:flex fixed top-0 bottom-0  flex-col justify-center gap-10 p-6 z-30 box-border border-r-2 bg-grey-400'>
-
-        <Link to={'/'}>
-            <div className='flex gap-1 hover:font-bold'>
-                    <HomeIcon></HomeIcon>
+        <div className="hidden md:flex lg:flex sticky top-0 h-screen flex-col justify-center gap-10 p-6 z-30 box-border border-r-2 bg-gray-200">
+            <Link to={'/'}>
+                <div className="flex gap-1 hover:font-bold">
+                    <HomeIcon />
                     <span>Home</span>
-            </div>
-        </Link>
-            
-        <Link to={'/favourites'}>
-            <div className='flex gap-1 hover:font-bold'>
-                
-                    <HeartIcon></HeartIcon>
+                </div>
+            </Link>
+
+            <Link to={'/favourites'}>
+                <div className="flex gap-1 hover:font-bold">
+                    <HeartIcon />
                     <span>Favourites</span>
-            </div>
-        </Link>
+                </div>
+            </Link>
         </div>
-    )
-}
+    );
+};
