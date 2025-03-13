@@ -1,6 +1,6 @@
 
 import SideBar from "./components/sidebar"
-import Homepage from "./pages/homepage"
+import Homepage from "./pages/Homepage"
 import { Routes, Route } from "react-router"
 import Favourites from "./pages/Favourites"
 import SingleProduct from "./pages/SingleProduct"
