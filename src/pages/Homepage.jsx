@@ -38,8 +38,8 @@ function Homepage() {
   }
 
   return (
-    <div className=' flex p-10 px-24'>
-      <div className='min-h-screen w-full '>
+    <div className=' flex p-10  px-24'>
+      <div className='min-h-screen  w-full '>
         <form onSubmit={searchRecipe} action="" className='flex gap-2 bg-white p-3 border rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 ease-in-out' >
           <button type='submit'>
             <Search />
@@ -59,11 +59,8 @@ function Homepage() {
         </div>
 
         {/* Grid */}
-        <div className='grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-5 box-border mt-10 justify-center items-center w-full place-items-center '>
+        <div className='grid grid-cols-1  lg:grid-cols-2 xl:grid-cols-3 gap-5 box-border mt-10 w-full justify-center items-center place-items-center'>
           {/* Card */}
-          {!loading && recipe.map(meal => (
-              <RecipeCard recipe={meal} className='mx-auto'/>
-          ))}
 
           {loading && [...Array(9)].map(() => (
             <div className="flex flex-col gap-4 w-72">
@@ -73,6 +70,12 @@ function Homepage() {
               <div className="skeleton h-4 w-full"></div>
             </div>
           ))}
+
+          {!loading && recipe.map(meal => (
+              <RecipeCard recipe={meal} className='mx-auto'/>
+          ))}
+
+          
         </div>
       </div>
     </div>
