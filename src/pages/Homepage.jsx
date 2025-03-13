@@ -38,7 +38,7 @@ function Homepage() {
   }
 
   return (
-    <div className=' flex p-10  px-24'>
+    <div className=' flex p-10  px-12'>
       <div className='min-h-screen  w-full '>
         <form onSubmit={searchRecipe} action="" className='flex gap-2 bg-white p-3 border rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 ease-in-out' >
           <button type='submit'>
