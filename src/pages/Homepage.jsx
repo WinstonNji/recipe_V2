@@ -1,5 +1,5 @@
 import React from 'react'
-import { Search} from 'lucide-react'
+import { Link, Search} from 'lucide-react'
 import RecipeCard from '../components/RecipeCard'
 import { useState, useEffect } from 'react'
 
@@ -38,8 +38,8 @@ function Homepage() {
   }
 
   return (
-    <div className=' flex p-10'>
-      <div className='min-h-screen w-full'>
+    <div className=' flex p-10 px-24'>
+      <div className='min-h-screen w-full '>
         <form onSubmit={searchRecipe} action="" className='flex gap-2 bg-white p-3 border rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 ease-in-out' >
           <button type='submit'>
             <Search />
@@ -59,10 +59,10 @@ function Homepage() {
         </div>
 
         {/* Grid */}
-        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 box-border mt-10 mx-auto justify-center items-center w-full place-items-center'>
+        <div className='grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-5 box-border mt-10 justify-center items-center w-full place-items-center '>
           {/* Card */}
           {!loading && recipe.map(meal => (
-            <RecipeCard recipe={meal} className='mx-auto'/>
+              <RecipeCard recipe={meal} className='mx-auto'/>
           ))}
 
           {loading && [...Array(9)].map(() => (

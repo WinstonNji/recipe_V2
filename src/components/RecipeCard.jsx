@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
-import { HeartPulse, HeartIcon, SoupIcon } from 'lucide-react'
+import { HeartPulse, HeartIcon, SoupIcon, EyeIcon } from 'lucide-react'
+import { Link } from 'react-router'
 
 function RecipeCard({recipe}) {  
   const [includedInFav, setIncludedInFav] = useState(localStorage.getItem('meal')?.includes(recipe.strMeal))
@@ -30,9 +31,9 @@ function RecipeCard({recipe}) {
                     src={recipe.strMealThumb}
                     alt={recipe.strMeal}
                     className='rounded-md w-full
-                    opacity-0 transition-opacity duration-500'
+                    hidden transition-opacity duration-500'
                     onLoad={(e) => {
-                      e.currentTarget.style.opacity = 1;
+                      e.currentTarget.style.display = 'block';
                       e.currentTarget.previousElementSibling.style.display = 'none'
                     }}
                   />
@@ -51,26 +52,25 @@ function RecipeCard({recipe}) {
                   </button>
                   
                 </div>
-              
-                {/* <div className='flex gap-2 absolute bottom-2 left-2 text-black p-2 rounded-md font-bold bg-gray-100 cursor-default'>
-                  <SoupIcon />
-                  <span>2 Servings</span>
-                </div> */}
             </div>
 
-              
-              
             <div>
+              {/* Meal Nsame */}
                 <p className='text-start font-bold'>{recipe.strMeal}</p>
+                {/* Cuisine origins */}
                 <p>{recipe.strArea} Cuisine</p>
             </div>
               
-            {/* <div className='flex gap-4 justify-start'>
+            <div className='flex gap-4 justify-center'>
                 <div className='flex gap-1 bg-gray-400 p-[4px] rounded-md'>
-                  <HeartPulse/>
-                  <span>{recipe.strCategory}</span>
+                  <Link to={`/products/${recipe.idMeal}`} >
+                    <button className='p-2 rounded-md font-bold flex gap-2'>
+                      <span>View Recipe Details</span>
+                      <EyeIcon></EyeIcon>
+                    </button>
+                  </Link>
                 </div>
-            </div> */}
+            </div>
     </div>
   )
 }

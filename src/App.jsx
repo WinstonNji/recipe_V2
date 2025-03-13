@@ -3,6 +3,7 @@ import SideBar from "./components/sidebar"
 import Homepage from "./pages/homepage"
 import { Routes, Route } from "react-router"
 import Favourites from "./pages/Favourites"
+import SingleProduct from "./pages/SingleProduct"
 
 export default function App() {
   return (
@@ -15,6 +16,7 @@ export default function App() {
         <Routes>
           <Route path="/" element={<Homepage />} />
           <Route path="/favourites" element={<Favourites />} />
+          <Route path="/products/:id" element={<SingleProduct />} />
         </Routes>
       </div>
     </div>
