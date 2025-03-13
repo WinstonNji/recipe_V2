@@ -23,7 +23,7 @@ function RecipeCard({recipe}) {
   }
 
   return (
-    <div className='p-4 rounded-md bg-gray-300 w-72 ring-black flex flex-col gap-2 max-h-fit'>
+    <div className='p-4 rounded-md bg-gray-300 w-80 ring-black flex flex-col gap-2 max-h-fit'>
             <div className='relative'>
               <a href={recipe.strYoutube} target='blank'>
                 <div className="skeleton h-52 w-full"></div>
@@ -31,7 +31,7 @@ function RecipeCard({recipe}) {
                     src={recipe.strMealThumb}
                     alt={recipe.strMeal}
                     className='rounded-md w-full
-                    hidden transition-opacity duration-500'
+                    hidden  duration-500'
                     onLoad={(e) => {
                       e.currentTarget.style.display = 'block';
                       e.currentTarget.previousElementSibling.style.display = 'none'
@@ -55,7 +55,7 @@ function RecipeCard({recipe}) {
             </div>
 
             <div>
-              {/* Meal Nsame */}
+              {/* Meal Name */}
                 <p className='text-start font-bold'>{recipe.strMeal}</p>
                 {/* Cuisine origins */}
                 <p>{recipe.strArea} Cuisine</p>
