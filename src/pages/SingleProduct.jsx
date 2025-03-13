@@ -59,7 +59,7 @@ return (
         )}
 
         {!loading && (
-                <div className="min-h-fit min-w-full p-8 lg:px-24 bg-blue-400">
+                <div className="min-h-fit min-w-full p-8 lg:px-24">
                 <div className="md:flex flex-col gap-3 items-center min-h-fit">
                     {/* card */}
                     <div className="flex flex-col gap-5 lg:flex-row md:flex-row">
